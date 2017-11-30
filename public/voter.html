@@ -16,7 +16,7 @@
     {{comment.title}} 
     <input type="checkbox" ng-model="comment.selected"></input>    
   </div>
-   <button type="submit" click="incrementUpvotes()">Vote</button>
+   <button type="submit" ng-click="incrementUpvotes()">Vote</button>
 </div>
 <p>Selected</p>
 <div ng-repeat="name in selected">
