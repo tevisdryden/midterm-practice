@@ -3,6 +3,7 @@ angular.module('comment', [])
   '$scope','$http',
   function($scope,$http){
     $scope.comments = [];
+    $scope.selected = [];
     $scope.addComment = function() {
       var newcomment = {title:$scope.formContent,upvotes:0};
       $scope.formContent='';
@@ -25,7 +26,13 @@ angular.module('comment', [])
       $scope.getAll();
     };
 	$scope.incrementUpvotes = function(comment) {
-	  $scope.upvote(comment);
+    $scope.selected = [];
+    angular.forEach($scope.comments, function(value, key){
+      if (value.selected = true) {
+        $scope.upvote(value);
+        $scope.selected.append(value);
+      }
+    })
     };
     $scope.getAll = function() {
       return $http.get('/comments').success(function(data){
