@@ -26,9 +26,12 @@ angular.module('comment', [])
       $scope.getAll();
     };
 	$scope.incrementUpvotes = function(comment) {
+    console.log("Top");
     $scope.selected = [];
     angular.forEach($scope.comments, function(value, key){
-      if (value.selected = true) {
+      console.log("box");
+      if (value.selected == true) {
+        console.log("checked");
         $scope.upvote(value);
         $scope.selected.append(value);
       }
