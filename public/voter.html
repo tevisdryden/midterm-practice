@@ -1,12 +1,12 @@
 <html>
 <head>
-  <title>Comments</title>
+  <title>Voter</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
   <script src="javascripts/app.js"></script>
 
 </head>
-<body ng-app="comment" ng-controller="MainCtrl">
+<body ng-app="Voter Page" ng-controller="MainCtrl">
 <div class="row">
 <div class="col-md-6 col-md-offset-3">
 <div class="page-header"> 
@@ -16,11 +16,11 @@
     {{comment.title}} 
     <input type="checkbox" ng-model="comment.selected"></input>    
   </div>
-   <button type="submit" ng-click="incrementUpvotes()">Vote</button>
-</div>
-<p>Selected</p>
-<div ng-repeat="name in selected">
-  {{name.title}}    
+  <button type="submit" ng-click="incrementUpvotes()">Vote</button>
+  <h2>Selected</h2>
+  <div ng-repeat="name in selected">
+    {{name.title}}    
+  </div>
 </div>
 </div>
 </body>
