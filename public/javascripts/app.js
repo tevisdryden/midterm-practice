@@ -33,7 +33,7 @@ angular.module('comment', [])
       if (value.selected == true) {
         console.log("checked");
         $scope.upvote(value);
-        $scope.selected.append(value);
+        $scope.selected.push(value);
       }
     })
     };
